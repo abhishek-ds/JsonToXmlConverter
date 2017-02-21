@@ -1,0 +1,7 @@
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\bin\Debug\JsonToXmlSoln.exe.config
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\bin\Debug\JsonToXmlSoln.exe
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\bin\Debug\JsonToXmlSoln.pdb
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\obj\Debug\JsonToXmlSoln.exe
+C:\Projects\JsonToXmlConverterSoln\JsonToXmlSoln\JsonToXmlSoln\obj\Debug\JsonToXmlSoln.pdb
