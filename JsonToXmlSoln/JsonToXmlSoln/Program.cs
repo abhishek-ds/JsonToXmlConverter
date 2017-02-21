@@ -15,6 +15,9 @@ namespace JsonToXmlSoln
 
             //DS--Read Url through App.Config
             string url = ConfigurationManager.AppSettings["TargetUrl"];
+            
+            //DS--Path and file name to Save as XML from App.config
+            string fileName = ConfigurationManager.AppSettings["FileName"];
             Stream stream = client.OpenRead(url);
 
             //DS--Initializes a new instance of the StreamReader class
@@ -28,7 +31,7 @@ namespace JsonToXmlSoln
             XmlDocument doc = (XmlDocument)JsonConvert.DeserializeXmlNode(jsonString, "Root");
             
             //DS--Write to a file in XML format
-            System.Xml.XmlTextWriter xmlTextWriter = new System.Xml.XmlTextWriter("TestJson.xml", null);
+            System.Xml.XmlTextWriter xmlTextWriter = new System.Xml.XmlTextWriter(fileName, null);
             xmlTextWriter.Formatting = System.Xml.Formatting.Indented;
             doc.Save(xmlTextWriter);            
             stream.Close();
