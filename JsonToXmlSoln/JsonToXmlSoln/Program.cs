@@ -14,17 +14,20 @@ namespace JsonToXmlSoln
 
             WebClient client = new WebClient();
 
-            //Read Url through App.Config
+            //DS--Read Url through App.Config
             string url = ConfigurationManager.AppSettings["TargetUrl"];
-
             Stream stream = client.OpenRead(url);
+
+            //DS--Initializes a new instance of the StreamReader class
             StreamReader streamReader = new StreamReader(stream);
 
             JObject jObject = JObject.Parse(streamReader.ReadLine());
+            //DS--Create a JSON String
             string jsonString = JsonConvert.SerializeObject(jObject);
 
             XmlDocument doc = (XmlDocument)JsonConvert.DeserializeXmlNode(jsonString, "Root");
-
+            
+            //DS--Write to a file in XML format
             System.Xml.XmlTextWriter xmlTextWriter = new System.Xml.XmlTextWriter("TestJson.xml", null);
             xmlTextWriter.Formatting = System.Xml.Formatting.Indented;
             doc.Save(xmlTextWriter);
