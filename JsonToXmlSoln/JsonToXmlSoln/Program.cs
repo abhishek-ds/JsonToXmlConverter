@@ -1,5 +1,4 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
 using System.IO;
@@ -15,10 +14,10 @@ namespace JsonToXmlSoln
 
             WebClient client = new WebClient();
 
-            //place holder for url and file name
-            //var holder = ConfigurationManager.AppSettings[""];
+            //Read Url through App.Config
+            string url = ConfigurationManager.AppSettings["TargetUrl"];
 
-            Stream stream = client.OpenRead("url");
+            Stream stream = client.OpenRead(url);
             StreamReader streamReader = new StreamReader(stream);
 
             JObject jObject = JObject.Parse(streamReader.ReadLine());
