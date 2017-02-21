@@ -22,6 +22,7 @@ namespace JsonToXmlSoln
             
             //DS--Path and file name to Save as XML from App.config
             string fileName = ConfigurationManager.AppSettings["FileName"];
+            fileName = string.Concat(fileName,".xml");
             Stream stream = client.OpenRead(url);
                         
             //DS--Initializes a new instance of the StreamReader class
