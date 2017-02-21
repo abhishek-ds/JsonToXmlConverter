@@ -29,7 +29,7 @@ namespace JsonToXmlSoln
             JObject jObject = JObject.Parse(streamReader.ReadLine());
             
             //DS--Visual Indicators
-            Console.WriteLine("JSON Parsing...");
+            Console.WriteLine("JSON Serializing...");
 
             //DS--Create a JSON String
             string jsonString = JsonConvert.SerializeObject(jObject);            
