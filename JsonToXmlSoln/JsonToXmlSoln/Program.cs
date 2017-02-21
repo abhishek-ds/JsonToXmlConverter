@@ -11,7 +11,6 @@ namespace JsonToXmlSoln
     {
         static void Main()
         {
-
             WebClient client = new WebClient();
 
             //DS--Read Url through App.Config
@@ -20,18 +19,18 @@ namespace JsonToXmlSoln
 
             //DS--Initializes a new instance of the StreamReader class
             StreamReader streamReader = new StreamReader(stream);
-
             JObject jObject = JObject.Parse(streamReader.ReadLine());
+
             //DS--Create a JSON String
             string jsonString = JsonConvert.SerializeObject(jObject);
 
+            //DS--JSON to XML Conversion
             XmlDocument doc = (XmlDocument)JsonConvert.DeserializeXmlNode(jsonString, "Root");
             
             //DS--Write to a file in XML format
             System.Xml.XmlTextWriter xmlTextWriter = new System.Xml.XmlTextWriter("TestJson.xml", null);
             xmlTextWriter.Formatting = System.Xml.Formatting.Indented;
-            doc.Save(xmlTextWriter);
-            
+            doc.Save(xmlTextWriter);            
             stream.Close();
         }
     }
